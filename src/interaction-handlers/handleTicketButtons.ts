@@ -23,7 +23,7 @@ export class ButtonHandler extends InteractionHandler {
 
 		return this.some();
 	}
-
+	//
 	public async run(interaction: ButtonInteraction) {
 		await interaction.deferReply({ ephemeral: true });
 		const channel = await interaction.client.channels.fetch('1280920903877918846');
