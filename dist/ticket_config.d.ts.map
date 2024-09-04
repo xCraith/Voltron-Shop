@@ -1,1 +1,0 @@
-{"version":3,"file":"ticket_config.d.ts","sourceRoot":"","sources":["../src/ticket_config.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,OAAO;IACvB,IAAI,EAAE,MAAM,CAAC;IACb,WAAW,EAAE,MAAM,CAAC;IACpB,WAAW,EAAE,MAAM,CAAC;IACpB,KAAK,EAAE,MAAM,CAAC;IACd,KAAK,EAAE,OAAO,CAAC;CACf;AAED,eAAO,MAAM,QAAQ,EAAE,OAAO,EAe7B,CAAC"}
