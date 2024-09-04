@@ -1,21 +1,36 @@
-- name: Typescript compiler
-  uses: iCrawl/action-tsc@v1
+name: Build TypeScript Code
 
 on:
   push:
-  pull_request:
+    branches:
+      - main # Auslösen des Workflows bei einem Push auf den Branch "main"
+      - master # Falls dein Hauptbranch "master" ist, nutze diesen hier
+  pull_request: # Workflow wird auch bei Pull Requests ausgeführt
+    branches:
+      - main
+      - master
 
 jobs:
-  tsc:
-    name: tsc
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v1
-    - name: install node v12
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - name: yarn install
-      run: yarn install
-    - name: tsc
-      uses: icrawl/action-tsc@v1
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Verwende die Node.js-Version 16 (oder eine andere, die du bevorzugst)
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build TypeScript code
+        run: yarn build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: dist/ # Pfad zum Build-Output, z.B. dist/ oder ein anderer Ordner
