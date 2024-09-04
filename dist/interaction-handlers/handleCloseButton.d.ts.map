@@ -1,0 +1,1 @@
+{"version":3,"file":"handleCloseButton.d.ts","sourceRoot":"","sources":["../../src/interaction-handlers/handleCloseButton.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAA2B,MAAM,qBAAqB,CAAC;AAClF,OAAO,EAAE,iBAAiB,EAAiB,MAAM,YAAY,CAAC;AAI9D,qBAGa,aAAc,SAAQ,kBAAkB;IACpC,KAAK,CAAC,WAAW,EAAE,iBAAiB;IAMvC,GAAG,CAAC,WAAW,EAAE,iBAAiB;CAS/C"}
