@@ -15,7 +15,7 @@ export class startTicketNEW extends Command {
 			command.setName(this.name).setDescription(this.description);
 		});
 	}
-
+	//
 	public override async chatInputRun(interaction: ChatInputCommandInteraction) {
 		const channel = (await interaction.client.channels.fetch('1280920903877918846')) as TextChannel;
 		const productList = products.filter((product) => product.isNew);
