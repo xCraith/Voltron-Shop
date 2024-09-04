@@ -3,11 +3,9 @@ name: Build TypeScript Code
 on:
   push:
     branches:
-      - main # Auslösen des Workflows bei einem Push auf den Branch "main"
       - master # Falls dein Hauptbranch "master" ist, nutze diesen hier
   pull_request: # Workflow wird auch bei Pull Requests ausgeführt
     branches:
-      - main
       - master
 
 jobs:
