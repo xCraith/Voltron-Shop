@@ -1,0 +1,1 @@
+{"version":3,"file":"createTicket.d.ts","sourceRoot":"","sources":["../../src/commands/createTicket.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,KAAK,0BAA0B,EAAE,MAAM,qBAAqB,CAAC;AAC/E,OAAO,EAAE,KAAK,2BAA2B,EAAE,MAAM,YAAY,CAAC;AAK9D,qBAKa,aAAc,SAAQ,OAAO;IACzB,2BAA2B,CAAC,QAAQ,EAAE,0BAA0B;IAM1D,YAAY,CAAC,WAAW,EAAE,2BAA2B;CAsB3E"}
