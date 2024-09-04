@@ -5,11 +5,11 @@ import { EmbedBuilder, ActionRowBuilder, ButtonBuilder, TextChannel, ButtonStyle
 import { products } from '../ticket_config';
 
 @ApplyOptions<Command.Options>({
-	name: 'sendnewtickets',
+	name: 'newproducts',
 	description: 'sends new tickets',
 	requiredUserPermissions: ['Administrator']
 })
-export class startTicketNEW extends Command {
+export class sendNewProducts extends Command {
 	public override registerApplicationCommands(registry: ApplicationCommandRegistry) {
 		registry.registerChatInputCommand((command) => {
 			command.setName(this.name).setDescription(this.description);
