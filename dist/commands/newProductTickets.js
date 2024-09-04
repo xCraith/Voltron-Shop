@@ -6,12 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.startTicketNEW = void 0;
+exports.sendNewProducts = void 0;
 const framework_1 = require("@sapphire/framework");
 const decorators_1 = require("@sapphire/decorators");
 const discord_js_1 = require("discord.js");
 const ticket_config_1 = require("../ticket_config");
-let startTicketNEW = class startTicketNEW extends framework_1.Command {
+let sendNewProducts = class sendNewProducts extends framework_1.Command {
     registerApplicationCommands(registry) {
         registry.registerChatInputCommand((command) => {
             command.setName(this.name).setDescription(this.description);
@@ -36,12 +36,12 @@ let startTicketNEW = class startTicketNEW extends framework_1.Command {
         }
     }
 };
-exports.startTicketNEW = startTicketNEW;
-exports.startTicketNEW = startTicketNEW = __decorate([
+exports.sendNewProducts = sendNewProducts;
+exports.sendNewProducts = sendNewProducts = __decorate([
     (0, decorators_1.ApplyOptions)({
-        name: 'sendnewtickets',
+        name: 'newproducts',
         description: 'sends new tickets',
         requiredUserPermissions: ['Administrator']
     })
-], startTicketNEW);
+], sendNewProducts);
 //# sourceMappingURL=newProductTickets.js.map
