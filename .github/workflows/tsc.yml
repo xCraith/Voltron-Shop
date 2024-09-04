@@ -1,11 +1,13 @@
-name: Build TypeScript Code
+name: Build and Commit TypeScript Code
 
 on:
   push:
     branches:
-      - master # Falls dein Hauptbranch "master" ist, nutze diesen hier
-  pull_request: # Workflow wird auch bei Pull Requests ausgeführt
+      - main
+      - master
+  pull_request:
     branches:
+      - main
       - master
 
 jobs:
@@ -19,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.12.0' # Verwende die Node.js-Version 16 (oder eine andere, die du bevorzugst)
+          node-version: '16' # Passende Node.js-Version
 
       - name: Install dependencies
         run: yarn install
@@ -27,8 +29,21 @@ jobs:
       - name: Build TypeScript code
         run: yarn build
 
+      - name: Check for changes in dist
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+            echo "Changes detected in the dist folder"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git config --global user.name "GitHub Actions Bot"
+            git add dist
+            git commit -m "chore: Update dist folder after build"
+            git push
+          else
+            echo "No changes detected"
+          fi
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: dist/ # Pfad zum Build-Output, z.B. dist/ oder ein anderer Ordner
+          path: dist/
