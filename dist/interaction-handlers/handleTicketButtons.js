@@ -15,6 +15,7 @@ class ButtonHandler extends framework_1.InteractionHandler {
             return this.none();
         return this.some();
     }
+    //
     async run(interaction) {
         await interaction.deferReply({ ephemeral: true });
         const channel = await interaction.client.channels.fetch('1280920903877918846');
