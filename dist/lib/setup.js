@@ -24,7 +24,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
-// Unless explicitly defined, set NODE_ENV as development:
 (_a = process.env).NODE_ENV ?? (_a.NODE_ENV = 'development');
 const framework_1 = require("@sapphire/framework");
 require("@sapphire/plugin-logger/register");
@@ -32,10 +31,7 @@ const env_utilities_1 = require("@skyra/env-utilities");
 const colorette = __importStar(require("colorette"));
 const node_path_1 = require("node:path");
 const constants_1 = require("./constants");
-// Set default behavior to bulk overwrite
 framework_1.ApplicationCommandRegistries.setDefaultBehaviorWhenNotIdentical(framework_1.RegisterBehavior.BulkOverwrite);
-// Read env var
 (0, env_utilities_1.setup)({ path: (0, node_path_1.join)(constants_1.srcDir, '.env') });
-// Enable colorette
 colorette.createColors({ useColor: true });
 //# sourceMappingURL=setup.js.map
